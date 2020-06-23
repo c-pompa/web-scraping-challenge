@@ -136,7 +136,7 @@ def scrape():
 
     # Convert table to HTML in notebooks
     # mars_table_html = mars_table_df.to_html(classes='mars_table')
-    mars_table_html = tables[1].to_html().replace('  ', ' ')
+    mars_table_html = tables[1].to_html().replace('  ', ' ').replace('border="1"','border="0"')
 
  
     # Save Mars table to an HTML file
