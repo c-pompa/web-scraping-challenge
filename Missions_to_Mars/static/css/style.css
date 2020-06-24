@@ -1,3 +1,12 @@
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+
+@media (max-width: 768px) {}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {}
+
 body,
 html {
     background-color: black;
@@ -187,10 +196,8 @@ table.dataframe {
 }
 
 .table-bg {
-    /* width: 300px; */
-    padding: 0px 25px 25px 25px;
+    padding: 0px 25px 25px 5px;
     /* border-radius: 10px 25px 10px 10px; */
-    /* background-color: black; */
 }
 
 thead {
@@ -282,22 +289,31 @@ figcaption.figure-caption {
 
 .carousel {
     max-height: 350px;
+    max-width: 300px;
 }
 
 div.image_container {
     /* background-color: yellow; */
     padding-top: 25px;
-    max-height: 350px;
+    max-height: 300px;
     max-width: 350px;
 }
 
 div.carousel-item img {
     height: 100%;
-    max-height: 340px;
+    max-height: 300px;
+}
+
+h5 a {
+    color: white;
+}
+
+h5 a:hover {
+    color: white;
 }
 
 .row {
-    /* width: 90%; */
+    width: 100%;
 }
 
 li span.overlay-text {
@@ -311,11 +327,12 @@ li span.overlay-text {
 
 ul {
     list-style: none;
-    margin: 0px;
+    /* margin: 0px; */
+    /* margin-bottom: 30px; */
     padding: 0px;
     text-align: right;
     /* position: absolute; */
-    /* top: 0; */
+    top: 0;
 }
 
 ul.two {
@@ -328,7 +345,7 @@ li {
     left: 0;
     margin: 0px;
     padding: 0px;
-    height: 200px;
+    height: 100px;
     position: static;
 }
 
@@ -351,7 +368,7 @@ line {
 .line-animation {
     height: auto;
     transform: none !important;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     width: 100%;
 }
 
@@ -365,50 +382,26 @@ line {
 }
 
 
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-    .row {
-        /* width: 98%; */
-        margin-left: 0px;
-    }
-}
-
-
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {
-    .container {
-        /* max-width: 992px; */
-    }
-    .row {
-        /* width: 98%; */
-        margin-left: 0px;
-    }
-}
-
-
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-
-@media (min-width: 768px) {
-    .container {
-        /* width: 90%; */
-    }
-    .table-bg {}
-    div.mars-facts {}
-    .row {
-        /* width: 98%; */
-    }
-    .facts {
-        /* padding: 5px;
-        margin: 5px; */
-    }
-}
-
-
-/* Small devices (landscape phones, 576px and up) */
+/* // Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
-    .facts {}
-    .container {}
+    /* .container {
+        margin: 0;
+        padding: 0;
+    } */
 }
+
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}

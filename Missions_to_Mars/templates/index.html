@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mission to Mars</title>
-
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -37,7 +36,7 @@
                 <div class='mars-feat-image'>
                     <h2>Featured Mars Image</h2>
                         <figure class="figure">
-                            <a href='{{ info.featured_image_url }}' self='_blank'><img src="{{ info.featured_image_url }}" class="figure-img img-fluid rounded img-featured" alt="Featured Image from JPL"></a>
+                            <a href='{{ info.featured_image_url }}'  target="_blank"><img src="{{ info.featured_image_url }}" class="figure-img img-fluid rounded img-featured" alt="Featured Image from JPL"></a>
                             <figcaption class="figure-caption">Latest Mars Featured Image from <a href='https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'>JPL</a></figcaption>
                         </figure>
                         </a>
@@ -66,9 +65,9 @@
     </div>
 
     <div class='container'>
-        <div class='row justify-content-md-center'>
+        <div class='row'>
             {% if info is not none %} 
-            <div class='tag col-lg-6 col-md-6 col-sm-6 facts'>
+            <div class='tag col-lg-6 col-md-6 col-sm-12 facts'>
                 <div class='mars-facts'>
                     <h2><strong>Mars Facts</strong></h2>  
                     <br>
@@ -91,10 +90,9 @@
 
             {% if info is not none %} 
 
-            <div class='tag col-lg-6 col-md-6 col-sm-6 fourimages'> 
+            <div class='tag col-lg-6 col-md-6 col-sm-12 fourimages'> 
                 <div class='image_container'>
                     <h2> Four Hemispheres of Mars </h2> 
-                    <br>
                     <div id="carouselExampleCaptions" class="carousel slide" data-interval="10000" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active">                              </li>
@@ -106,7 +104,7 @@
                             <div class="carousel-item active">
                             <img src="{{ info.hemisphere_image_urls.0['img_url'] }}" class="d-block w-100" alt="{{ info.hemisphere_image_urls.0['title'] }}">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{ info.hemisphere_image_urls.0['title'] }}</h5>
+                                    <h5><a href="{{ info.hemisphere_image_urls.0['img_url'] }}" target="_blank">{{ info.hemisphere_image_urls.0['title'] }}</a></h5>
                                     
                                 </div>
                             </div>
@@ -129,7 +127,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <h5>{{ info.hemisphere_image_urls.1['title'] }}</h5>
+                                    <h5><a href="{{ info.hemisphere_image_urls.1['img_url'] }}" target="_blank">{{ info.hemisphere_image_urls.1['title'] }}</a></h5>
 
                                 </div>
                             </div>
@@ -137,14 +135,14 @@
                             <div class="carousel-item">
                                 <img src="{{ info.hemisphere_image_urls.2['img_url'] }}" class="d-block w-100" alt="{{ info.hemisphere_image_urls.2['title'] }}">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{ info.hemisphere_image_urls.2['title'] }}</h5>
+                                    <h5><a href="{{ info.hemisphere_image_urls.2['img_url'] }}" target="_blank">{{ info.hemisphere_image_urls.2['title'] }}</a></h5>
                                     
                                 </div>
                             </div>
                             <div class="carousel-item">
                             <img src="{{ info.hemisphere_image_urls.3['img_url'] }}" class="d-block w-100" alt="{{ info.hemisphere_image_urls.3['title'] }}">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{ info.hemisphere_image_urls.3['title'] }}</h5>
+                                    <h5><a href="{{ info.hemisphere_image_urls.3['img_url'] }}" target="_blank">{{ info.hemisphere_image_urls.3['title'] }}</a></h5>
                                    
                                 </div>
                             </div>
